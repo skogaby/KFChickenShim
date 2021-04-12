@@ -2,7 +2,7 @@
 
 So, you bought a Sound Voltex 4 cabinet, but weren't able to secure an official or clone upgrade kit for Sound Voltex V?
 
-This is **KFChickenShim**, a simple PCB that adapts the various JST connectors found on a Sound Voltex IV IO board (known as **KFCA**) to standard connectors that allow you to easily connect the board to an off-the-shelf PC. Doing this, you can utilize a solution known as **KFChicken**, combined with **SpiceTools**, to run SDVX 5 or newer inside an older cabinet, complete with full IO, card reader, working lights, headphone support, etc.
+This is **KFChickenShim**, a simple PCB that adapts the various JST connectors found on a Sound Voltex IV IO board (known as **KFCA**) to standard connectors that allow you to easily connect the board to an off-the-shelf PC. Doing this, you can utilize a solution known as **KFChicken**, combined with **SpiceTools**, to run SDVX 5 or newer inside an older cabinet, complete with full IO, card reader, working lights, headphone support, etc. In addition, there is no perceivable latency or negative affect on gameplay, though your in-game offsets may not be what you're typically used to and might need adjustment for the new setup.
 
 ![PCB image 1](https://raw.githubusercontent.com/skogaby/KFChickenShim/main/Images/board_front.JPEG)
 ![PCB image 1](https://raw.githubusercontent.com/skogaby/KFChickenShim/main/Images/board_back.JPEG)
@@ -108,7 +108,7 @@ Connect the card reader to the wiring harness from the KFCA.
 
 Connect the serial from the wiring harness to the KFChickenShim board.
 
-![Serial](https://raw.githubusercontent.com/skogaby/KFChickenShim/main/Images/19.JPEG)
+![Serial](https://raw.githubusercontent.com/skogaby/KFChickenShim/main/Images/19.jpeg)
 
 Connect this plug from the wiring harness to the KFCA board.
 
@@ -133,7 +133,7 @@ Hopefully this is the end of your hardware journey. Read the notes below for imp
 Generally, just follow the KFChicken release thread's instructions for setting everything up, but here's a quick rundown and ***note the bolded item in particular:***
 * Copy the `libacio.dll` file from your SDVX 4 installation and paste it into your SDVX 5 installation, renaming it to `libacio32.dll`.
 * Copy `kfchicken32.dll` and `kfchicken32.exe` into your SDVX 5 installation. The KFChicken release thread says you can use the 64-bit version and the SDVX 5 DLLs but this doesn't work correctly as of this writing, so use the SDVX 4 modules and 32-bit KFChicken.
-* Setup your `kfchicken.json` file as below, making sure to change the `com` field to the appropriate COM port to match whatever serial port the KFCA is hooked up to, and also the right settings to match your SpiceAPI port and password in `gamestart.bat` (covered next). **NOTE: The default `kfchicken.json` file has the `baudrate` field set to `57600`. I personally experienced unplayable knobs/analog inputs until I changed this value to `115200` instead.**
+* Setup your `kfchicken.json` file as below, making sure to change the `com` field to the appropriate COM port to match whatever serial port the KFCA is hooked up to (can be found using Windows Device Manager, under `Ports (COM and LPT)`), and also the right settings to match your SpiceAPI port and password in `gamestart.bat` (covered next). **NOTE: The default `kfchicken.json` file has the `baudrate` field set to `57600`. I personally experienced unplayable knobs/analog inputs until I changed this value to `115200` instead.**
 ```json
 {
   "acio_dll": "libacio32.dll",
