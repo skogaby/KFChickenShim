@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name KFChickenShim)(type KiCad)(uri ${KIPRJMOD}/KFChickenShim.pretty)(options "")(descr ""))
+  (lib (name SparkFun-Connectors)(type KiCad)(uri ${KIPRJMOD}/SparkFun-KiCad-Libraries/Footprints/Connectors.pretty)(options "")(descr ""))
+  (lib (name Connector_JST_Better)(type KiCad)(uri ${KIPRJMOD}/BetterJST/Connector_JST.pretty)(options "")(descr ""))
+)

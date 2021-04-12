@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name SparkFun-Aesthetics)(type Legacy)(uri ${KIPRJMOD}/SparkFun-KiCad-Libraries/Libraries/SparkFun-Aesthetics.lib)(options "")(descr ""))
+  (lib (name SparkFun-Connectors)(type Legacy)(uri ${KIPRJMOD}/SparkFun-KiCad-Libraries/Libraries/SparkFun-Connectors.lib)(options "")(descr ""))
+)
